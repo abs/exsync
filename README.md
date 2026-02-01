@@ -1,6 +1,10 @@
 ExSync
 ======
 
+> **Note:** This is a maintained fork of [exsync](https://github.com/falood/exsync),
+> published on hex as `exsynchro` because the original package is abandoned.
+> Includes fixes for Elixir 1.19+ and path dependencies with non-existent build dirs.
+
 An Elixir reloader. When your code changes, ExSync automatically recompiles it.
 
 Supports recompiling `:path` dependencies without additional configuration. Also
@@ -25,7 +29,7 @@ mix new my_app
 ```elixir
 def deps do
   [
-    {:exsync, "~> 0.4", only: :dev},
+    {:exsynchro, "~> 0.5", only: :dev},
   ]
 end
 ```

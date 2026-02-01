@@ -1,17 +1,17 @@
 defmodule ExSync.Mixfile do
   use Mix.Project
 
-  @source_url "https://github.com/falood/exsync"
-  @version "0.4.1"
+  @source_url "https://github.com/abs/exsync"
+  @version "0.5.0"
 
   def project do
     [
-      app: :exsync,
+      app: :exsynchro,
       version: @version,
       elixir: "~> 1.11",
       elixirc_paths: ["lib", "web"],
       deps: deps(),
-      description: "Yet another Elixir reloader.",
+      description: "Elixir code reloader. Maintained fork of exsync.",
       source_url: @source_url,
       homepage_url: @source_url,
       package: package(),
@@ -28,16 +28,19 @@ defmodule ExSync.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.14", only: :docs},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:file_system, "~> 1.0 or ~> 0.2"}
     ]
   end
 
   defp package do
     %{
-      maintainers: ["Xiangrong Hao", "Jason Axelson"],
+      maintainers: ["Xiangrong Hao", "Jason Axelson", "Andrei Soroker"],
       licenses: ["BSD-3-Clause"],
-      links: %{"Github" => "https://github.com/falood/exsync"}
+      links: %{
+        "GitHub" => "https://github.com/abs/exsync",
+        "Original" => "https://github.com/falood/exsync"
+      }
     }
   end
 
